@@ -1,12 +1,13 @@
 .page {
     display: grid;
-    grid-template-columns: 2fr 120px 2fr;
-    grid-template-rows: 2fr 5fr 2fr auto;
+    grid-template-columns: 2fr 5fr 2fr;
+    /* grid-template-rows: 2fr 5fr 2fr auto; */
     justify-items: center;
 }
 
 .test_item {
     margin: 10px;
-    /* padding: 50px; */
+    padding: 5px;
     border: 3px solid black;
+    justify-self: stretch;
 }
