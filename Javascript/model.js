@@ -20,9 +20,11 @@ const model = {
   pointsOverTime: 0,
 
   //The emote list loads the pictures so they can be used in the code
-  //img is the file path. ppc is points per click modifier
+  //img is the file path. 
+  //ppc is points per click modifier
   //pot is points over time modifier
   //price is the cost of buying a new icon
+  //amount is how many emotes are purchased of this kind
   //iscat is for determining if ppc or pot will increase
   //default value is 0, but it is modified later
   emoteList: [
