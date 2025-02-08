@@ -1,0 +1,13 @@
+body {
+    background-image: url(../Media/RoyalRainbow.png);
+    background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.earPop {
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+}
