@@ -5,13 +5,20 @@ const model = {
 
   //the click icon is the image you click to gain ears
   clickIcon: {
-    img: "../HaruEmotes/Dohya.png",
+    img: "../Media/Dohya big.png",
   },
 
   //the buy icon is theone you click to buy another emote
   buyIcon: {
-    img: "../HaruEmotes/Mogu.png",
+    img: "../Media/Mogu big.png",
   },
+  
+  // icon representing points
+  mimiIcon: {
+    img: "../Media/mimi.png",
+  },
+
+  currentPoints: 0,
 
   //points per click is how many ears you get for clicking the click icon
   pointsPerClick: 1,
