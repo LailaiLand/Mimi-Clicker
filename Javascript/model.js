@@ -27,7 +27,7 @@ const model = {
   pointsOverTime: 0,
 
   //The emote list loads the pictures so they can be used in the code
-  //img is the file path. 
+  //img is the file path to the icon. 
   //ppc is points per click modifier
   //pot is points over time modifier
   //price is the cost of buying a new icon
