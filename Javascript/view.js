@@ -60,6 +60,11 @@ function generateStore() {
   return html;
 }
 
+function buyItem(boxId, emote, icon){
+    emoteBox = document.getElementById(boxId);
+
+}
+
 // Test I used for positioning the click icon on the background
 // test()
 
