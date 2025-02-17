@@ -5,6 +5,16 @@ function initializeStore() {
     model.emoteList[i].isCat
       ? (model.emoteList[i].ppc = pointMofier)
       : (model.emoteList[i].pot = pointMofier);
-    
   }
+}
+
+function clickIncrease() {
+  model.currentPoints += model.pointsPerClick;
+}
+
+function modifierUpdate(emote) {
+  emote.isCat
+    ? (model.pointsPerClick += emote.ppc)
+    : (model.pointsOverTime = emote.pot);
+  emote.price += emote.amount + 5
 }

@@ -1,4 +1,5 @@
 printView();
+potTimer();
 
 function printView() {
   let html = "";
@@ -11,7 +12,7 @@ function printView() {
       <div class="pointsBox">
         <div class="currentPointsContainer">
           <img class="mimiIcon" src="${model.mimiIcon.img}">
-          <p class="currentPointsDisplayed">
+          <p class="currentPointsDisplayed" id="pointsDisplay">
             ${model.currentPoints}
           </p>
         </div>
@@ -19,11 +20,11 @@ function printView() {
         <div class="pointsInfoContainer">
           <div class="ppcInfo">
             <img class="mimiIcon" src="${model.mimiIcon.img}">
-            per click: ${model.pointsPerClick}
+            <p id="ppcDisplay">per click: ${model.pointsPerClick} </p>
           </div>
           <div class="potInfo">
             <img class="mimiIcon" src="${model.mimiIcon.img}">
-            per second: ${model.pointsOverTime}
+            <p id="potDisplay">per second: ${model.pointsOverTime}</p>
           </div>
         </div>
       </div>
@@ -36,23 +37,23 @@ function printView() {
 
 function generateStore() {
   let html = "";
-  initializeStore()
+  initializeStore();
   for (let i = 0; i < model.emoteList.length; i++) {
     html += /*HTML*/ `
           <div class="storeItemContainer">
             <img class="buyIcon" 
               src="Media/Mogu big.png" 
               onclick=
-              "buyItem('item${i}', ${model.emoteList[i]} , this)"
+              "buyItem('item${i}', '${i}' , this , 'priceDisplay${i}',)"
               id="buyIcon${i}">
             <div class="itemBox" id="item${i}">
-              <!--temp-->
-              <img src="${model.emoteList[i].img}">
             </div>
             <p class="itemPrice">
               Price:
               <img class="mimiIcon" src="${model.mimiIcon.img}">
-              ${model.emoteList[i].price}
+              <p id="priceDisplay${i}"> 
+                ${model.emoteList[i].price}
+              </p>
             </p>
           </div>
         `;
@@ -60,10 +61,47 @@ function generateStore() {
   return html;
 }
 
-function buyItem(boxId, emote, icon){
-    emoteBox = document.getElementById(boxId);
-
+function buyItem(boxId, emote, icon, itemPrice) {
+  let emoteBox = document.getElementById(boxId);
+  let priceText = document.getElementById(itemPrice);
+  let emoteObject = model.emoteList[emote]
+  if (model.currentPoints >= emoteObject.price) {
+    model.currentPoints -= emoteObject.price;
+    modifierUpdate(emoteObject);
+    emoteBox.innerHTML += `<img src="${emoteObject.img}" class="boughtItem">`;
+    priceText.innerHTML = emoteObject.price;
+  }
 }
+
+function earClick(image) {
+  clickIncrease();
+  updatePoints();
+}
+
+function potTimer() {
+  setInterval(() => {
+    model.currentPoints += model.pointsOverTime;
+    updatePoints();
+  }, 1000);
+}
+
+function updatePoints() {
+  document.getElementById("pointsDisplay").innerHTML =
+    "total: " + model.currentPoints;
+  document.getElementById("ppcDisplay").innerHTML =
+    "per click: " + model.pointsPerClick;
+  document.getElementById("potDisplay").innerHTML =
+    "per second: " + model.pointsOverTime;
+}
+
+// function earClickSize(image) {
+//   image.style.height = 180;
+//   image.style.width = 180;
+//   setTimeout(() => {
+//     image.style.height = 200;
+//     image.style.width = 200;
+//   }, 100);
+// }
 
 // Test I used for positioning the click icon on the background
 // test()
