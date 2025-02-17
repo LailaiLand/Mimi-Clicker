@@ -12,7 +12,7 @@ const model = {
   buyIcon: {
     img: "../Media/Mogu big.png",
   },
-  
+
   // icon representing points
   mimiIcon: {
     img: "../Media/mimi.png",
@@ -27,7 +27,7 @@ const model = {
   pointsOverTime: 0,
 
   //The emote list loads the pictures so they can be used in the code
-  //img is the file path to the icon. 
+  //img is the file path to the icon.
   //ppc is points per click modifier
   //pot is points over time modifier
   //price is the cost of buying a new icon
@@ -386,6 +386,94 @@ const model = {
       price: 0,
       amount: 0,
       isCat: true,
+    },
+    {
+      img: "../HaruEmotes/Sad.png",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/dancing.gif",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/YAY.png",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/CatomoWink.png",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: false,
+    },
+    {
+      img: "../HaruEmotes/Pokan.png",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/Huh.gif",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/Chipi.gif",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/Batsu.png",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/HYPERJAM.gif",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/Pop.gif",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: true,
+    },
+    {
+      img: "../HaruEmotes/Hea.png",
+      ppc: 0,
+      pot: 0,
+      price: 0,
+      amount: 0,
+      isCat: false,
     },
   ],
 };
